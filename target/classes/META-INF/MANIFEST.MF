@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Main-Class: 
+Main-Class: Main
 Class-Path: hibernate-commons-annotations-5.1.0.Final.jar org.restlet.ex
  t.jackson-2.4.3.jar FastInfoset-1.2.15.jar jetty-io-9.4.11.v20180605.ja
  r jaxb-api-2.3.1.jar jackson-dataformat-xml-2.9.6.jar org.restlet.ext.j
@@ -19,4 +19,5 @@ Class-Path: hibernate-commons-annotations-5.1.0.Final.jar org.restlet.ex
  ivation-api-1.2.0.jar txw2-2.3.1.jar validation-api-1.1.0.Final.jar log
  back-core-1.2.3.jar jackson-core-2.9.6.jar istack-commons-runtime-3.0.7
  .jar
+
 
