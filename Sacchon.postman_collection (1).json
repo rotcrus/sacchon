@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "40e7f499-3aea-4f83-9972-bb95b668077b",
+		"name": "Sacchon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"Dimitris\",\r\n    \"password\": \"Dimitriou\",\r\n    \"name\": \"dimitris\",\r\n    \"address\": \"Athens\",\r\n    \"email\": \"dimitriou@gmail.com\",\r\n    \"age\": \"30\",\r\n    \"sex\": \"male\",\r\n    \"dateRegistered\": \"2021-05-05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add measurement To patient 1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dimitriou",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Dimitris",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"glucose\": 10,\r\n    \"date\": \"2021-05-15\",\r\n   \"patientId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/v1/patient/1/glucose/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"patient",
+						"1",
+						"glucose",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add measurement To patient 7",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dimitriou",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Dimitris",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"glucose\": 120,\r\n    \"date\": \"2021-05-14\",\r\n   \"patientId\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/v1/patient/7/glucose/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"patient",
+						"7",
+						"glucose",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Chief Doctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"chief\",\r\n    \"password\": \"3333\",\r\n    \"name\": \"Dr Bourla\",\r\n    \"address\": \"Usa\",\r\n    \"email\": \"chief@pfizer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/v1/chiefDoctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"chiefDoctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientsAsChief",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "3333",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "chief",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/v1/patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get unconsulted patients as Chief",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "3333",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "chief",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/v1/reportUnconsultedPatient/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"reportUnconsultedPatient",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get carbs",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "3333",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "chief",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/v1/reportPatientCarb/1?period=05/05/2021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"reportPatientCarb",
+						"1"
+					],
+					"query": [
+						{
+							"key": "period",
+							"value": "05/05/2021"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add doctor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "get glucose of patient when doctor",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "simpleDoctor",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "7777",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/v1/doctor/1/glucose/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"doctor",
+						"1",
+						"glucose",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
